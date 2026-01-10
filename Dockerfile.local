@@ -85,6 +85,7 @@ ARG GIT_COMMIT=unknown
 RUN echo "$GIT_COMMIT" > static/commit.txt
 
 ENV GIT_COMMIT="$GIT_COMMIT"
+ENV GAME_ENV=dev
 
 EXPOSE 3000
 
