@@ -3,7 +3,7 @@ import { execSync } from "child_process";
 import path from "path";
 import { fileURLToPath } from "url";
 import { defineConfig, loadEnv } from "vite";
-import { createHtmlPlugin } from "vite-plugin-html";
+// import { createHtmlPlugin } from "vite-plugin-html";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import tsconfigPaths from "vite-tsconfig-paths";
 
@@ -50,7 +50,7 @@ export default defineConfig(({ mode }) => {
 
     plugins: [
       tsconfigPaths(),
-      createHtmlPlugin({
+      /* createHtmlPlugin({
         minify: isProduction,
         entry: "/src/client/Main.ts",
         template: "index.html",
@@ -59,7 +59,7 @@ export default defineConfig(({ mode }) => {
             // In case we need to inject variables into HTML
           },
         },
-      }),
+      }), */
       viteStaticCopy({
         targets: [
           {
